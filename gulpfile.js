@@ -1,4 +1,5 @@
 ﻿/// <binding Clean='clean' />
+// this is a test comment
 "use strict";
 
 const gulp = require("gulp"),
