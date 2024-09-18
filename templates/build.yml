@@ -1,0 +1,20 @@
+- task: DotNetCoreCLI@2
+  displayName: 'Build the project - Debug'
+  inputs:
+    command: 'build'
+    arguments: '--no-restore --configuration Debug'
+    projects: '**/*.csproj'
+
+- task: DotNetCoreCLI@2
+  displayName: 'Publish the project - Debug'
+  inputs:
+    command: 'publish'
+    projects: '**/*.csproj'
+    publishWebProjects: false
+    arguments: '--no-build --configuration Debug --output $(Build.ArtifactStagingDirectory)/Debug'
+    zipAfterPublish: true
+
+
+  parameters:
+  buildConfiguration: 'Release'
+
