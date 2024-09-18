@@ -1,3 +1,7 @@
+parameters:
+  buildConfiguration: 'Debug'
+
+steps:
 - task: DotNetCoreCLI@2
   displayName: 'Build the project - Debug'
   inputs:
@@ -15,6 +19,4 @@
     zipAfterPublish: true
 
 
-  parameters:
-  buildConfiguration: 'Release'
 
